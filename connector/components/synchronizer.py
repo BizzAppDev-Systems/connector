@@ -423,7 +423,7 @@ class GenericExporter(AbstractComponent):
         assert self.external_id
         # special check on data before export
         self._validate_update_data(data)
-        self.backend_adapter.write(self.external_id, data)
+        return self.backend_adapter.write(self.external_id, data)
 
 
 class Importer(AbstractComponent):
