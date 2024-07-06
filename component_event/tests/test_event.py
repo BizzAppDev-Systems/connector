@@ -21,6 +21,10 @@ from odoo.addons.component_event.core import EventWorkContext
 class TestEventWorkContext(unittest.TestCase):
     """Test Events Components"""
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.test_sequence = 0
+
     if sys.version_info < (3, 8):
         # Copy/paste from
         # https://github.com/odoo/odoo/blob/0218d870d319af4f263d5e9aa324990f7cc90139/
